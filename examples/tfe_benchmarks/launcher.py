@@ -22,11 +22,13 @@ $ python3 scripts/aws_launcher.py \
 import argparse
 import logging
 import os
+import sys
 
-from deeplearning.projects.crypten.examples.multiprocess_launcher import (
-    MultiProcessLauncher,
-)
+file_path = "/Users/amithabh_a/dev/garbage/CrypTen"
+directory_path = os.path.dirname(file_path)
+sys.path.append(directory_path)
 
+from CrypTen.examples import MultiProcessLauncher
 
 parser = argparse.ArgumentParser(description="CrypTen TFEncrypted Benchmarks")
 parser.add_argument(

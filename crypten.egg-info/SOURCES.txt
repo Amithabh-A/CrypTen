@@ -80,6 +80,9 @@ examples/__init__.py
 examples/meters.py
 examples/multiprocess_launcher.py
 examples/util.py
+examples/mpc_linear_svm/__init__.py
+examples/mpc_linear_svm/launcher.py
+examples/mpc_linear_svm/mpc_linear_svm.py
 test/__init__.py
 test/multiprocess_test_case.py
 test/multithread_test_case.py
@@ -105,3 +108,14 @@ test/test_privacy_models.py
 test/test_tensorboard.py
 test/pytorch_backend/__init__.py
 test/pytorch_backend/pytorch_tensor.py
+tutorials/__init__.py
+tutorials/crypten_utils.py
+tutorials/mnist_utils.py
+tutorials/test.py
+tutorials/examples/__init__.py
+tutorials/examples/meters.py
+tutorials/examples/multiprocess_launcher.py
+tutorials/examples/util.py
+tutorials/mpc_linear_svm/__init__.py
+tutorials/mpc_linear_svm/launcher.py
+tutorials/mpc_linear_svm/mpc_linear_svm.py

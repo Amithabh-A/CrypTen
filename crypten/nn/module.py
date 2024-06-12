@@ -9,9 +9,10 @@ import logging
 import warnings
 from collections import OrderedDict
 
-import crypten
 import torch
 import torch.onnx.symbolic_helper as sym_help
+
+import crypten
 from crypten.common.functions.pooling import _adaptive_pool2d_helper
 
 
@@ -2320,6 +2321,19 @@ class ReLU(Module):
     @staticmethod
     def from_onnx(attributes=None):
         return ReLU()
+
+class Identity(Module):
+    def __init__(self, inplace=False):
+        super().__init__()
+        if inplace:
+            logging.warning("CrypTen Identity module does not support inplace computation.")
+
+    def forward(self, x):
+        return x
+
+    @staticmethod
+    def from_onnx(attributes=None):
+        return Identity()
 
 
 class Hardtanh(Module):

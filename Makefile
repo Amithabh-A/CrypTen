@@ -1,7 +1,7 @@
 all:
 	pip install -r requirements.txt
 	pip install .
-	cp configs/default.yaml venv/lib/python3.12/site-packages/configs/
+	cp configs/ venv/lib/python3.10/site-packages/
 
 
 tutorial:

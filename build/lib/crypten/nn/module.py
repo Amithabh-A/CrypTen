@@ -2322,6 +2322,20 @@ class ReLU(Module):
         return ReLU()
 
 
+class Identity(Module):
+    def __init__(self, inplace=False):
+        super().__init__()
+        if inplace:
+            logging.warning("CrypTen Identity module does not support inplace computation.")
+
+    def forward(self, x):
+        return x
+
+    @staticmethod
+    def from_onnx(attributes=None):
+        return Identity()
+
+
 class Hardtanh(Module):
     r"""Applies the Hardtanh function element-wise
 
